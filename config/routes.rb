@@ -1,7 +1,9 @@
 Omr::Application.routes.draw do
-  get "static_pages/home"
+  # You can have the root of your site routed with "root"
+  # just remember to delete public/index.html.
+  root :to => 'static_pages#home'
 
-  get "static_pages/about"
+  get "about" => "static_pages#about"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -49,10 +51,6 @@ Omr::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-
-  # You can have the root of your site routed with "root"
-  # just remember to delete public/index.html.
-   root :to => 'static_pages#home'
 
   # See how all your routes lay out with "rake routes"
 
