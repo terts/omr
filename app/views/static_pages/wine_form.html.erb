@@ -1,4 +1,5 @@
-<%= form_tag( { :action => :wine_form, }, { :method => :post }) %>
+<%= form_tag(:action => :wine_form, :method => :post) do -%>
+  <div id="wineForm">
   <%= text_field :wine, :name, "size" => 20 %>
   <%= text_field :grape, :names, "size" => 20 %>
   <%= select_tag(:like, options_for_select(['Yes', 1], ['No', 2], ['Need to try', 3])) %>
@@ -9,4 +10,6 @@
   <%= text_field :where, :found, "size" => 20 %>
   <%= text_field :cost, :amt, "size" => 20 %>
   <%= select_tag(:inStock, options_for_select(['Yes', 1], ['No', 2])) %>
-<%= end %>
+  <%= submit_tag 'Save' %>
+  </div>
+<% end -%>
