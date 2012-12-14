@@ -1,19 +1,24 @@
  <% if user_signed_in? %>
-	<div class="center hero-unit">
-	    <h1>You're signed in!</h1>
+	<div class="center">
+	    <h1>Your Wine Data</h1>
+  		<p><%= link_to "Add More Wine Data", wine_form_path, class: "btn btn-small" %></p>
+
+  		<%= render 'layouts/table' %>
 	</div>
 <% else %>
-	<div class="center hero-unit">
-	    <h1>Welcome to One Month Rails</h1>
+	<div id="home-image"><img src='assets/Wine_Bottles.jpg'></div>
+	<div class="center hero-unit" id="home-notLoggedIn">
 
-	    <h2>
-	      You've found the home page for the
-	      <a href="http://omrails.com/">One Month Rails</a>
-	      first application.
-	    </h2>
+	    <h1>Welcome to MyWinery</h1>
+
+	    <p>
+	      For access to 
+	      <%= link_to "MyWinery", root_path %>
+	      please Sign In.  If you do not have an account, then please Sign Up.
+	    </p>
 
 	    <%= link_to "Sign up now!", new_user_registration_path, 
-	                                class: "btn btn-large btn-primary" %>
+	        class: "btn btn-large btn-primary" %>
 	</div>
 
 <% end %>

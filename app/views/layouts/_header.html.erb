@@ -1,0 +1,21 @@
+    <header>
+    <header class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <div id="logo"></div>
+          <%= link_to "MyWinery", root_path, id: "headerbar" %>
+          <nav>
+            <ul class="nav pull-right">
+                <li><%= link_to "About", about_path %></li>
+                <li>
+                  <% if user_signed_in? %>
+                    <%= link_to "Sign Out", destroy_user_session_path, :method => :delete  %>
+                  <% else %>
+                    <%= link_to "Sign In", new_user_session_path  %>
+                  <% end %>
+                </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
