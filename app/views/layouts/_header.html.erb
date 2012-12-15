@@ -3,9 +3,10 @@
       <div class="navbar-inner">
         <div class="container">
           <div id="logo"></div>
-          <%= link_to "MyWinery", root_path, id: "headerbar" %>
+          <div id="headerbar">MyWinery</div>
           <nav>
             <ul class="nav pull-right">
+                <li><%= link_to "Home", root_path %></li>
                 <li><%= link_to "About", about_path %></li>
                 <li>
                   <% if user_signed_in? %>
