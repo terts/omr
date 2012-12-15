@@ -1,0 +1,41 @@
+<h1>Listing wines</h1>
+
+<table>
+  <tr>
+    <th>Winename</th>
+    <th>Grapes</th>
+    <th>Like</th>
+    <th>Wineryname</th>
+    <th>Winerylocation</th>
+    <th>Vintage</th>
+    <th>Foodpairings</th>
+    <th>Wherefound</th>
+    <th>Cost</th>
+    <th>Instock</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @wines.each do |wine| %>
+  <tr>
+    <td><%= wine.wineName %></td>
+    <td><%= wine.grapes %></td>
+    <td><%= wine.like %></td>
+    <td><%= wine.wineryName %></td>
+    <td><%= wine.wineryLocation %></td>
+    <td><%= wine.vintage %></td>
+    <td><%= wine.foodPairings %></td>
+    <td><%= wine.whereFound %></td>
+    <td><%= wine.cost %></td>
+    <td><%= wine.inStock %></td>
+    <td><%= link_to 'Show', wine %></td>
+    <td><%= link_to 'Edit', edit_wine_path(wine) %></td>
+    <td><%= link_to 'Destroy', wine, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Wine', new_wine_path %>

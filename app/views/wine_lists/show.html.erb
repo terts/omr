@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Winename:</b>
+  <%= @wine_list.wineName %>
+</p>
+
+<p>
+  <b>Grapes:</b>
+  <%= @wine_list.grapes %>
+</p>
+
+<p>
+  <b>Like:</b>
+  <%= @wine_list.like %>
+</p>
+
+<p>
+  <b>Wineryname:</b>
+  <%= @wine_list.wineryName %>
+</p>
+
+<p>
+  <b>Winerylocation:</b>
+  <%= @wine_list.wineryLocation %>
+</p>
+
+<p>
+  <b>Vintage:</b>
+  <%= @wine_list.vintage %>
+</p>
+
+<p>
+  <b>Foodpairings:</b>
+  <%= @wine_list.foodPairings %>
+</p>
+
+<p>
+  <b>Wherefound:</b>
+  <%= @wine_list.whereFound %>
+</p>
+
+<p>
+  <b>Cost:</b>
+  <%= @wine_list.cost %>
+</p>
+
+<p>
+  <b>Instock:</b>
+  <%= @wine_list.inStock %>
+</p>
+
+
+<%= link_to 'Edit', edit_wine_list_path(@wine_list) %> |
+<%= link_to 'Back', wine_lists_path %>

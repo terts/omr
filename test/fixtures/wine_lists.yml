@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  wineName: MyString
+  grapes: MyString
+  like: MyString
+  wineryName: MyString
+  wineryLocation: MyString
+  vintage: MyString
+  foodPairings: MyString
+  whereFound: MyString
+  cost: 
+  inStock: MyString
+
+two:
+  wineName: MyString
+  grapes: MyString
+  like: MyString
+  wineryName: MyString
+  wineryLocation: MyString
+  vintage: MyString
+  foodPairings: MyString
+  whereFound: MyString
+  cost: 
+  inStock: MyString

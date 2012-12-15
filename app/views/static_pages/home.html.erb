@@ -6,7 +6,7 @@
   		<%= render 'layouts/table' %>
 	</div>
 <% else %>
-	<div id="home-image"><img src='assets/Wine_Bottles.jpg'></div>
+	<div id="home-image"><%= image_tag("Wine_Bottles.jpg", :alt => "wine bottles") %></div>
 	<div class="center hero-unit" id="home-notLoggedIn">
 
 	    <h1>Welcome to MyWinery</h1>
